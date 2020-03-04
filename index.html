@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Projet 3 OpenClassrooms</title>
+        <link rel="stylesheet" href="projet3.css">
+        <!-- Inclusion of leaflet JS And CSS files for the Map-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Inclusion of the script for FontAwesome Icons-->
+
+
+
+    </head>
+
+    <body>
+        <h1> Bienvenue sur le site fictif de location de vélo de Rouen</h1>
+<!-- firstSection : Slider -->
+        <div id="slider">
+            <!-- Including slider pictures-->
+            <div class="slide" id="slide1">
+                <img src="images/Slide1P3.png" alt="instructions partie 1"/>
+                
+            </div>
+            <div class="slide" id="slide2">
+                <img src="images/Slide2P3.png" alt="instructions partie 2"/>
+            </div> 
+            <div class="slide" id="slide3">
+                <img src="images/Slide3P3.png" alt="instructions partie 3"/>
+            </div>
+            <div class="slide" id="slide4">
+                <img src="images/Slide4P3.png" alt="instructions partie 4"/>
+            </div>    
+            <div class="slide" id="slide5">
+                <img src="images/Slide5P3.png" alt="instructions partie 5"/> 
+            </div>
+        </div>
+            <!-- Including  FontAwesome Icons-->
+        <div id="sliderButtons">
+            <div id="leftButton">
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div id="playButton">
+                <i class="fas fa-play"></i>
+            </div>
+            <div id="pauseButton">
+                <i class="fas fa-pause"></i>
+            </div>
+            <div id="rightButton">
+                <i class="fas fa-angle-right"></i>
+            </div>  
+        </div>
+        
+<!-- secondSection : Map and Canvas -->
+        <div id="secondSection">
+            <div id="mapid">
+            </div>
+            <div id="reservation">
+                 <!-- Inclusion  the reservation form, span is for a display none/block with JS-->
+                <form  id="reservationForm" method="post">
+                    <p>Pour afficher les détails d'une station, <br/>
+                        veuillez cliquer sur une station sur la carte.</p>
+                    <p><span id="detailsStation">Détails de la station: </span><br/>
+                        Nom: <span class="stationName"></span> <br/>
+                        Adresse: <span id="stationAddress"></span><br/>
+                        <span id=availableBikeStands></span> places<br/>
+                        <span id=availableBikes></span> vélos disponibles
+                    </p><span id="detailStation"></span>
+                    <p><input class="formText lastName"  type="text" name="lastName" placeholder="Nom" value="" required />
+                    </p>
+                    <p><input class="formText firstName" type="text" name="firstName" placeholder="Prénom" value="" required/>
+                    </p>
+                    <p><button   id="continue"  class="formSubmit">Continuer</button>  <!-- Clicking on the buttons makes the canvas appear for signature-->
+                    </p>
+                
+                  <!-- Inclusion of  the canvas and the buttons clear and submit reservation associated-->
+                    <canvas id="signaturePad"></canvas>
+                    <div id="canvasButtons">
+                        <p><input id="submit" type="submit" value="Réserver">
+                        </p>
+                        <button  id="clear">Effacer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+<!-- thirdSection : Timer -->
+        <div id="thirdSection">
+            <p>Vélo réservé à la station <span class="stationName"></span> par <span class="firstName"></span> <span class="lastName"></span>.
+            </p><!--spans are for including the first and last name from the form-->
+            <p>Il vous reste <span id="timerTime"></span> minutes avant l'expiration de votre réservation.
+            </p><!--span is for including the timer in JS-->
+        </div>
+        <p><span id="expirationOfRevervation">Votre réservation a expiré. Veuillez réserver un autre vélo.</span>
+        </p><!--span is for the expiration of reservation message-->
+<!-- Inclusion of JS files-->
+        <script src="Slider.js"></script> 
+        <script src="Map.js"></script>
+        <script src="Canvas.js"></script>
+        <script src="Timer.js"></script>
+    </body>
+</html>

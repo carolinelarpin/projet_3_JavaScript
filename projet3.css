@@ -1,0 +1,217 @@
+body    
+    {
+        background-color:lightgrey;
+        font-family: "lato";
+    }
+
+
+h1
+    {
+        color: black;
+        text-align: center;
+        font-size: 5em;
+        
+    }
+
+
+@media screen and (max-width: 767px)
+{
+   h1
+   {
+       font-size: 1.5em;
+   }
+
+}
+
+@media screen and (min-width: 768px)
+{
+    h1
+    {
+        font-size: 3em;
+    }
+}
+
+
+
+
+
+/*firstSection : Slider*/
+
+
+#slider
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+.slide
+    {
+        margin: auto;
+    }
+    
+.slide img
+    {
+        max-width: 100%;
+        height: auto
+    }
+
+#slide2, #slide3
+    {
+        display: none;
+    }
+
+#sliderButtons
+    {
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        width: 25%;
+        margin: auto;
+        font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
+
+#playButton
+    {
+        display: none;
+    }
+
+    @media screen and (max-width: 767px)
+    {
+        #sliderButtons
+       {
+           font-size: 1em;
+       }
+    
+    }
+    
+    @media screen and (min-width: 768px)
+    {
+        #sliderButtons
+        {
+            font-size: 1em;
+        }
+    }
+
+
+
+
+/*secondSection*/
+#secondSection
+    {
+        display: flex;
+        border: 2px solid black;
+    }
+
+
+#mapid , #reservation
+    { 
+        height: 500px; 
+        width: 50%
+    }
+
+#mapid
+    {
+        margin-right: 5%;
+    }
+
+
+#detailsStation
+    {
+        font-weight: bold;
+        color: darkred;
+    }
+.formText, .formSubmit
+    {
+        display: none;
+        font-family: "lato";
+    }
+
+#signaturePad 
+    {
+        width:30%;
+        height: 100px;
+        border: 1px solid black;
+        display: none;
+        background-color: white;
+       
+    }
+
+#canvasButtons
+    {
+        display: flex;
+    }
+
+#clear, #submit
+    {
+        display: none;
+        font-family: "lato";
+    }
+
+.formSubmit, #clear, #submit
+    {
+       background-color: darkred;
+       border-radius: 15%; 
+       color: lightgray;
+       height: 30px;
+    }
+
+#canvasButtons p
+    {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 767px)
+    {
+        #secondSection
+        {
+            flex-direction: column;
+            padding-bottom: 25%;
+        }
+
+        #mapid , #reservation
+        {
+            height: 400px;
+            width: 100%;
+        }
+        #signaturePad
+        {
+           width: 70%;
+        }
+
+       .formText
+        {
+            width: 75%;
+        }
+    }
+
+
+
+/*thirdSection*/
+#thirdSection
+    {
+        display: none;
+        border: 2px solid black;
+        margin-top: 2%;
+        text-align: center;
+    }
+
+#thirdSection span
+    {
+        color: darkred;
+        font-weight: bold;
+    }
+
+#expirationOfRevervation
+    {
+        display: none;
+        border: 2px solid black;
+        margin-top: 2%;
+        text-align: center;
+    }
+
+
+
+
+
